@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yang.demo.mapper.ReplyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yang.demo.pojo.Reply">
+        <id column="user_id" property="userId" />
+        <result column="reply_id" property="replyId" />
+        <result column="los_user_id" property="losUserId" />
+        <result column="lf_id" property="lfId" />
+        <result column="mar_user_id" property="marUserId" />
+        <result column="mk_id" property="mkId" />
+        <result column="hel_user_id" property="helUserId" />
+        <result column="hp_id" property="hpId" />
+        <result column="reply_content" property="replyContent" />
+        <result column="reply_picture" property="replyPicture" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_id, reply_id, los_user_id, lf_id, mar_user_id, mk_id, hel_user_id, hp_id, reply_content, reply_picture
+    </sql>
+
+</mapper>

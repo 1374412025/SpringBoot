@@ -1,15 +1,15 @@
-package com.jing.helloworld;
+package com.yang.demo;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//本身就是Spring的一个组件
 @SpringBootApplication
-public class HelloworldApplication {
+@MapperScan("com.yang.demo.mapper")
+public class DemoApplication {
 
     public static void main(String[] args) {
-
-        SpringApplication.run(HelloworldApplication.class, args);
+        SpringApplication.run(DemoApplication.class, args);
     }
 
 }

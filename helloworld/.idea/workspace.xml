@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2def4b91-abf9-4c30-a2f2-419b791a5fc6" name="Default Changelist" comment="1">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jing/helloworld/HelloworldApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jing/helloworld/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/jing/helloworld/HelloworldApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Springboothello/Springboothello.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Springboothello/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Springboothello/src/main/java/com/jing/Springboothello/SpringboothelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Springboothello/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Springboothello/src/test/java/com/jing/Springboothello/SpringboothelloApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../campusAssistance/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../campusAssistance/src/test/java/com/yang/demo/fengCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jing/helloworld/AutoWiredBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jing/helloworld/Springboot02WebApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld.iml" beforeDir="false" afterPath="$PROJECT_DIR$/helloworld.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jing/helloworld/HelloworldApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jing/helloworld/HelloworldApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,13 +50,46 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.HelloworldApplication">
+    <configuration name="HelloworldApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="helloworld" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jing.helloworld.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jing.helloworld" />
+      <option name="MAIN_CLASS_NAME" value="com.jing.helloworld.HelloworldApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Springboot02WebApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="helloworld" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jing.helloworld.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jing.helloworld" />
+      <option name="MAIN_CLASS_NAME" value="com.jing.helloworld.Springboot02WebApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloworldApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="helloworld" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.jing.helloworld.HelloworldApplication" />
@@ -68,6 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HelloworldApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.Springboot02WebApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -81,6 +116,7 @@
       <updated>1679713305369</updated>
       <workItem from="1679713308095" duration="3252000" />
       <workItem from="1679793053836" duration="2248000" />
+      <workItem from="1680234847676" duration="3483000" />
     </task>
     <servers />
   </component>
@@ -96,38 +132,38 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="331" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1679713362418" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1679715813478">
+    <state width="1493" height="258" key="GridCell.Tab.0.bottom" timestamp="1680534330098">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1679715813478" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1679715813478">
+    <state width="1493" height="258" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1680534330098" />
+    <state width="1493" height="258" key="GridCell.Tab.0.center" timestamp="1680534330098">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1679715813478" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1679715813478">
+    <state width="1493" height="258" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1680534330098" />
+    <state width="1493" height="258" key="GridCell.Tab.0.left" timestamp="1680534330098">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1679715813478" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1679715813478">
+    <state width="1493" height="258" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1680534330098" />
+    <state width="1493" height="258" key="GridCell.Tab.0.right" timestamp="1680534330098">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1679715813478" />
-    <state width="1493" height="208" key="GridCell.Tab.1.bottom" timestamp="1679715813479">
+    <state width="1493" height="258" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1680534330098" />
+    <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1680534330100">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1679715813479" />
-    <state width="1493" height="208" key="GridCell.Tab.1.center" timestamp="1679715813479">
+    <state width="1493" height="258" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1680534330100" />
+    <state width="1493" height="258" key="GridCell.Tab.1.center" timestamp="1680534330098">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1679715813479" />
-    <state width="1493" height="208" key="GridCell.Tab.1.left" timestamp="1679715813478">
+    <state width="1493" height="258" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1680534330098" />
+    <state width="1493" height="258" key="GridCell.Tab.1.left" timestamp="1680534330098">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1679715813478" />
-    <state width="1493" height="208" key="GridCell.Tab.1.right" timestamp="1679715813479">
+    <state width="1493" height="258" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1680534330098" />
+    <state width="1493" height="258" key="GridCell.Tab.1.right" timestamp="1680534330099">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1679715813479" />
+    <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1680534330099" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1679715675184">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

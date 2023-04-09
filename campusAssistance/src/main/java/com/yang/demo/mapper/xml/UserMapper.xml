@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yang.demo.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yang.demo.pojo.User">
+        <id column="user_id" property="userId" />
+        <result column="user_pwd" property="userPwd" />
+        <result column="user_gender" property="userGender" />
+        <result column="user_college" property="userCollege" />
+        <result column="user_phone" property="userPhone" />
+        <result column="user_location" property="userLocation" />
+        <result column="user_email" property="userEmail" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_id, user_pwd, user_gender, user_college, user_phone, user_location, user_email
+    </sql>
+
+</mapper>
