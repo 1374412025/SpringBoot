@@ -1,44 +1,41 @@
 package com.yang.demo.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
-
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 /**
  * <p>
- * ʧ?????
+ * ???
  * </p>
  *
  * @author jing
- * @since 2023-03-29
+ * @since 2023-04-21
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class Lostfound implements Serializable {
+public class Comment implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "user_id", type = IdType.AUTO)
-    private String userId;
+    //@TableId(value = "pos_user_openid", type = IdType.ID_WORKER_STR)
+    private String posUserOpenid;
 
-    private String lfId;
+    private String postId;
 
-    private String lfItems;
+    private String userOpenid;
+    @TableId(value = "comment_id", type = IdType.ID_WORKER_STR)
+    private String commentId;
 
-    private String lfPicture;
+    private String commentContent;
 
-    private String lfLocation;
-
-    private String lfContent;
+    private Date commentDate;
 
 
 }

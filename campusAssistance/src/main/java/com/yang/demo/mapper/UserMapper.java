@@ -3,6 +3,7 @@ package com.yang.demo.mapper;
 import com.yang.demo.pojo.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.mapstruct.Mapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -10,9 +11,10 @@ import org.mapstruct.Mapper;
  * </p>
  *
  * @author jing
- * @since 2023-03-29
+ * @since 2023-04-21
  */
 @Mapper
+@Repository
 public interface UserMapper extends BaseMapper<User> {
 
 }

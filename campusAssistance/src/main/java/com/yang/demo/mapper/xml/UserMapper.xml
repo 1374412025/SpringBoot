@@ -4,18 +4,19 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.yang.demo.pojo.User">
-        <id column="user_id" property="userId" />
-        <result column="user_pwd" property="userPwd" />
-        <result column="user_gender" property="userGender" />
-        <result column="user_college" property="userCollege" />
-        <result column="user_phone" property="userPhone" />
+        <id column="user_openid" property="userOpenid" />
+        <result column="user_key" property="userKey" />
+        <result column="user_headimgurl" property="userHeadimgurl" />
+        <result column="user_nickname" property="userNickname" />
+        <result column="user_sex" property="userSex" />
         <result column="user_location" property="userLocation" />
-        <result column="user_email" property="userEmail" />
+        <result column="user_phone" property="userPhone" />
+        <result column="user_introduce" property="userIntroduce" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        user_id, user_pwd, user_gender, user_college, user_phone, user_location, user_email
+        user_openid, user_key, user_headimgurl, user_nickname, user_sex, user_location, user_phone, user_introduce
     </sql>
 
 </mapper>

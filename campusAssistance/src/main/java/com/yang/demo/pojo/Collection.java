@@ -9,7 +9,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * ????Ա
+ * ?ղ
  * </p>
  *
  * @author jing
@@ -18,14 +18,18 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class Admin implements Serializable {
+public class Collection implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "admin_openid", type = IdType.AUTO)
-    private String adminOpenid;
+    //@TableId(value = "user_openid", type = IdType.ID_WORKER_STR)
+    private String userOpenid;
 
-    private String adminKey;
+    private String posUserOpenid;
+
+    private String postId;
+    @TableId(value = "collection_id", type=IdType.ID_WORKER_STR )
+    private String collectionId;
 
 
 }

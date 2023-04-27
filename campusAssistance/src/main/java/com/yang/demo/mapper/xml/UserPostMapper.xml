@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yang.demo.mapper.UserPostMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yang.demo.view.UserPost">
+        <result column="post_id" property="postId" />
+        <result column="post_type" property="postType" />
+        <result column="post_title" property="postTitle" />
+        <result column="post_content" property="postContent" />
+        <result column="post_imgurl" property="postImgurl" />
+        <result column="post_imgurl2" property="postImgurl2" />
+        <result column="post_date" property="postDate" />
+        <result column="user_openid" property="userOpenid" />
+        <result column="user_headimgurl" property="userHeadimgurl" />
+        <result column="user_nickname" property="userNickname" />
+        <result column="user_sex" property="userSex" />
+        <result column="user_introduce" property="userIntroduce" />
+        <result column="user_location" property="userLocation" />
+        <result column="user_phone" property="userPhone" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        post_id, post_type, post_title, post_content, post_imgurl, post_imgurl2, post_date, user_openid, user_headimgurl, user_nickname, user_sex, user_introduce,user_location,user_phone
+    </sql>
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yang.demo.mapper.CollectionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yang.demo.pojo.Collection">
+        <id column="user_openid" property="userOpenid" />
+        <result column="pos_user_openid" property="posUserOpenid" />
+        <result column="post_id" property="postId" />
+        <result column="collection_id" property="collectionId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_openid, pos_user_openid, post_id, collection_id
+    </sql>
+
+</mapper>

@@ -4,13 +4,13 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.yang.demo.pojo.Admin">
-        <id column="admin_id" property="adminId" />
-        <result column="admin_pwd" property="adminPwd" />
+        <id column="admin_openid" property="adminOpenid" />
+        <result column="admin_key" property="adminKey" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        admin_id, admin_pwd
+        admin_openid, admin_key
     </sql>
 
 </mapper>

@@ -4,7 +4,10 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 /**
@@ -13,10 +16,9 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author jing
- * @since 2023-03-29
+ * @since 2023-04-21
  */
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
@@ -25,20 +27,22 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "user_id", type = IdType.ID_WORKER_STR)
-    private String userId;
+    @TableId(value = "user_openid", type = IdType.INPUT)
+    private String userOpenid;
 
-    private String userPwd;
+    private String userKey;
 
-    private Boolean userGender;
+    private String userHeadimgurl;
 
-    private String userCollege;
+    private String userNickname;
 
-    private String userPhone;
+    private String userSex;
 
     private String userLocation;
 
-    private String userEmail;
+    private String userPhone;
+
+    private String userIntroduce;
 
 
 }

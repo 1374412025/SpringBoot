@@ -1,13 +1,13 @@
 package com.yang.demo.mapper;
 
-import com.yang.demo.pojo.Admin;
+import com.yang.demo.pojo.Collection;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.mapstruct.Mapper;
 import org.springframework.stereotype.Repository;
 
 /**
  * <p>
- * ????Ա Mapper 接口
+ * ?ղ Mapper 接口
  * </p>
  *
  * @author jing
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Repository;
  */
 @Mapper
 @Repository
-public interface AdminMapper extends BaseMapper<Admin> {
+public interface CollectionMapper extends BaseMapper<Collection> {
 
 }

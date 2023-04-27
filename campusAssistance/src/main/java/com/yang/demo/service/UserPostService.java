@@ -1,16 +1,16 @@
 package com.yang.demo.service;
 
-import com.yang.demo.pojo.Help;
+import com.yang.demo.view.UserPost;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- * ? 服务类
+ * VIEW 服务类
  * </p>
  *
  * @author jing
- * @since 2023-03-29
+ * @since 2023-04-25
  */
-public interface HelpService extends IService<Help> {
+public interface UserPostService extends IService<UserPost> {
 
 }
