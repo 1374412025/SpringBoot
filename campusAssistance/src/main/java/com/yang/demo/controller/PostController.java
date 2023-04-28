@@ -15,6 +15,7 @@ import com.yang.demo.service.UserPostService;
 import com.yang.demo.view.UserPost;
 import com.yang.demo.view.userComment;
 import javafx.geometry.Pos;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -69,16 +70,18 @@ public class PostController {
         }
         return JSONUtil.toJsonStr(msg) ;
     }
-    @RequestMapping("/queryMyPost")
 
-    public String queryMYPost(@RequestBody() Map param) {
+    @RequestMapping("/getPostIdByOpenId")
+    public String getPostIdByOpenId(@RequestBody() Map param) {
+        QueryWrapper<Post> wr = new QueryWrapper<>();
+        wr.eq("user_openid", param.get("Openid"));
+        List<Post> list = postService.list(wr);
 
-        return JSONUtil.toJsonStr(param) ;
-    }
-    @RequestMapping("/queryAllPost")
-    public String queryAllPost(@RequestBody() Map param) {
+        Msg msg = new Msg();
+        msg.setResult(list);
 
-        return JSONUtil.toJsonStr(param) ;
+        return JSONUtil.parse(msg).toString();
+
     }
 
     @Autowired
@@ -93,6 +96,33 @@ public class PostController {
         Msg msg = new Msg();
         msg.setResult(list);
 //        list.forEach(System.out::println);
+        return JSONUtil.parse(msg).toString();
+    }
+
+    @RequestMapping("/queryPostInfo")
+    public String queryPostInfo(@RequestBody() Map param) {
+//    public String queryUserPostByPostType(@RequestParam() String  postType) {
+        QueryWrapper<UserPost> wr = new QueryWrapper<>();
+        String a=(String) param.get("data");
+        wr.like(StringUtils.isNotBlank((String)a),"post_title",a).or().like(StringUtils.isNotBlank((String)a),"post_content",a);
+
+        List<UserPost> list = userPostService.list(wr);
+        Msg msg = new Msg();
+        msg.setResult(list);
+//        list.forEach(System.out::println);
+        return JSONUtil.parse(msg).toString();
+    }
+
+    @RequestMapping("/getPostDetailByOpenId")
+    public String getPostDetailByOpenId(@RequestBody() Map param) {
+//    public String queryUserPostByPostType(@RequestParam() String  postType) {
+        QueryWrapper<UserPost> wr = new QueryWrapper<>();
+        wr.eq("user_openid", param.get("Openid"));
+
+        List<UserPost> list = userPostService.list(wr);
+        Msg msg = new Msg();
+        msg.setResult(list);
+
         return JSONUtil.parse(msg).toString();
     }
     @RequestMapping("/queryAUserPost")

@@ -36,6 +36,7 @@ public class Comment implements Serializable {
     private String commentContent;
 
     private Date commentDate;
+    private String flag;
 
 
 }

@@ -28,4 +28,6 @@ public class userComment {
     @JsonFormat(timezone = "GMT+8", pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     private Data commentDate;
 
+    private String flag;
+
 }
