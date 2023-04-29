@@ -53,17 +53,21 @@ public class CommentController {
     @RequestMapping("/getDetailByPostIdList")
     public String getDetailByPostIdList(@RequestBody() Map param){
 
-        QueryWrapper<userComment> wr = new QueryWrapper<>();
-        wr.orderByAsc("flag");
+        QueryWrapper<userComment> wr2 = new QueryWrapper<>();
+        wr2.orderByAsc("flag");
+        userCommentService.list(wr2);
         List<String> postid= (List<String>) param.get("PostIdlist");
 
         List<userComment> userComments = new LinkedList<>();
 
         for (String id : postid) {
-            wr.eq("post_id",id);
-            List<userComment> list = userCommentService.list(wr);
+            QueryWrapper<userComment> wr1 = new QueryWrapper<>();
+            wr1.eq("post_id",id);
+
+            List<userComment> list = userCommentService.list(wr1);
             userComments.addAll(list);
         }
+
 
         Msg msg = new Msg();
         msg.setResult(userComments);

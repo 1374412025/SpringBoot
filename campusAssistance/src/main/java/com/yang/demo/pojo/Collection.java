@@ -22,10 +22,7 @@ public class Collection implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    //@TableId(value = "user_openid", type = IdType.ID_WORKER_STR)
     private String userOpenid;
-
-    private String posUserOpenid;
 
     private String postId;
     @TableId(value = "collection_id", type=IdType.ID_WORKER_STR )

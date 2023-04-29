@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.Date;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -48,7 +49,6 @@ public class PostController {
 
         Post post = new Post();
         post.setUserOpenid((String) param.get("userOpenid"));
-
         post.setPostType((String) param.get("postType"));
         post.setPostTitle((String) param.get("postTitle"));
         post.setPostContent((String) param.get("postContent"));
@@ -56,7 +56,6 @@ public class PostController {
         post.setPostImgurl2((String) param.get("postImgurl2"));
         DateTime now = DateTime.now();
         post.setPostDate(now);
-
 
         boolean result = postService.saveOrUpdate(post);
         Msg msg = new Msg();
@@ -156,7 +155,26 @@ public class PostController {
         return JSONUtil.parse(msg).toString();
     }
 
+    @RequestMapping("/queryPostDetailListByPostIdList")
+    public String getDetailByPostIdList(@RequestBody() Map param){
 
+
+
+        List<String> postid= (List<String>) param.get("postIdList");
+
+        List<UserPost> userPosts = new LinkedList<>();
+
+        for (String id : postid) {
+            QueryWrapper<UserPost> wr = new QueryWrapper<>();
+            wr.eq("post_id",id);
+            List<UserPost> list = userPostService.list(wr);
+            userPosts.addAll(list);
+        }
+
+        Msg msg = new Msg();
+        msg.setResult(userPosts);
+        return JSONUtil.parse(msg).toString();
+    }
 
 
 }
