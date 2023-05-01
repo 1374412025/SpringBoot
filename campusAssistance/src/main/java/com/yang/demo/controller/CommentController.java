@@ -84,7 +84,6 @@ public class CommentController {
 
         Comment comment = new Comment();
 
-        comment.setPosUserOpenid("qweqwe");
         comment.setCommentContent((String) param.get("commentContent"));
         DateTime now = DateTime.now();
         comment.setCommentDate(now);
