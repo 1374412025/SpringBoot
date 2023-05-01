@@ -1,7 +1,7 @@
 package com.yang.demo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.yang.demo.pojo.Admin;
+import com.yang.demo.pojo.Announcement;
 import org.mapstruct.Mapper;
 import org.springframework.stereotype.Repository;
 

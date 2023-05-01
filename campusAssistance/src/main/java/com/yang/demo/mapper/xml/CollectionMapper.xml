@@ -5,7 +5,7 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.yang.demo.pojo.Collection">
         <id column="user_openid" property="userOpenid" />
-        <result column="pos_user_openid" property="posUserOpenid" />
+
         <result column="post_id" property="postId" />
         <result column="collection_id" property="collectionId" />
     </resultMap>
