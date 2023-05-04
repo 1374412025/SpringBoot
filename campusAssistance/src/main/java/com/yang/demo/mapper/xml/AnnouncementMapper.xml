@@ -4,14 +4,14 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.yang.demo.pojo.Announcement">
-        <id column="announcement_id" property="AnnouncementId" />
-        <result column="announcement_content" property="AnnouncementContent" />
-        <result column="announcement_date" property="AnnouncementDate" />
+        <id column="announcement_id" property="announcementId" />
+        <result column="announcement_content" property="announcementContent" />
+        <result column="announcement_datatime" property="announcementDatatime" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        announcement_id,  announcement_content, announcement_date
+        announcement_id, announcement_content, announcement_datatime
     </sql>
 
 </mapper>

@@ -70,6 +70,18 @@ public class PostController {
         return JSONUtil.toJsonStr(msg) ;
     }
 
+    @RequestMapping("/deletePost")
+    public String deletePost(@RequestBody() Map param){
+
+        QueryWrapper<Post> wr = new QueryWrapper<>();
+        wr.eq("post_id", (String) param.get("postId"));
+        boolean flag = postService.remove(wr);
+
+        Msg msg = new Msg();
+        msg.setResult(flag);
+        return JSONUtil.parse(msg).toString();
+    }
+
     @RequestMapping("/getPostIdByOpenId")
     public String getPostIdByOpenId(@RequestBody() Map param) {
         QueryWrapper<Post> wr = new QueryWrapper<>();

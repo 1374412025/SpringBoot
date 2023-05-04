@@ -5,12 +5,11 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.yang.demo.pojo.Admin">
         <id column="admin_openid" property="adminOpenid" />
-        <result column="admin_key" property="adminKey" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        admin_openid, admin_key
+        admin_openid
     </sql>
 
 </mapper>

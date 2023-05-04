@@ -25,7 +25,6 @@ public class Admin implements Serializable {
     @TableId(value = "admin_openid", type = IdType.AUTO)
     private String adminOpenid;
 
-    private String adminKey;
 
 
 }

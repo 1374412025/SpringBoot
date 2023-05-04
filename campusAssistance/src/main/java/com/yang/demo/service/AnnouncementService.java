@@ -1,15 +1,16 @@
 package com.yang.demo.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.yang.demo.pojo.Announcement;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
- * @version: java version 1.8
- * @Author: Tao
- * @description:
- * @date: 2023-05-02 0:36
+ * <p>
+ *  服务类
+ * </p>
+ *
+ * @author jing
+ * @since 2023-05-02
  */
-
-
 public interface AnnouncementService extends IService<Announcement> {
+
 }
