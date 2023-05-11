@@ -26,9 +26,6 @@ public class Comment implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    //@TableId(value = "pos_user_openid", type = IdType.ID_WORKER_STR)
-    private String posUserOpenid;
-
     private String postId;
 
     private String userOpenid;

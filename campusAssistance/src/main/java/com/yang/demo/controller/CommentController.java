@@ -97,7 +97,7 @@ public class CommentController {
             QueryWrapper<Comment> wr = new QueryWrapper<>();
             wr.eq("user_openid",param.get("userOpenid"));
             Comment one = commentService.getOne(wr);
-            msg.setResult(one);
+            msg.setResult("true");
         }else {
             msg.setResult("false");
         }

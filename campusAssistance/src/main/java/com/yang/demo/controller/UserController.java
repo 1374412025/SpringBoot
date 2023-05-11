@@ -65,12 +65,10 @@ public class UserController {
     public String createUser(@RequestBody()Map param){
 
         User user = new User();
-
         user.setUserNickname((String) param.get("userNickname"));
         user.setUserHeadimgurl((String) param.get("userHeadimgurl"));
         user.setUserOpenid((String) param.get("userOpenid"));
         user.setUserKey("1");
-
         user.setUserPhone(" ");
         user.setUserLocation("");
         user.setUserIntroduce("");

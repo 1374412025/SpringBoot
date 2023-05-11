@@ -56,7 +56,6 @@ public class PostController {
         post.setPostImgurl2((String) param.get("postImgurl2"));
         DateTime now = DateTime.now();
         post.setPostDate(now);
-
         boolean result = postService.saveOrUpdate(post);
         Msg msg = new Msg();
         if (result){
@@ -101,12 +100,9 @@ public class PostController {
 
     @RequestMapping("/queryUserPost")
     public String queryUserPost(@RequestBody() Map param) {
-//    public String queryUserPostByPostType(@RequestParam() String  postType) {
-
         List<UserPost> list = userPostService.list(null);
         Msg msg = new Msg();
         msg.setResult(list);
-//        list.forEach(System.out::println);
         return JSONUtil.parse(msg).toString();
     }
 
@@ -152,25 +148,16 @@ public class PostController {
 
     @RequestMapping("/queryUserPostByUserOpenid")
     public String queryUserPostByUserOpenid(@RequestBody() Map param) {
-//    public String queryUserPostByPostType(@RequestParam() String  postType) {
-
         QueryWrapper<UserPost> wr = new QueryWrapper<>();
         wr.eq("user_openid",param.get("data"));
-
-
         List<UserPost> list = userPostService.list(wr);
-
         Msg msg = new Msg();
         msg.setResult(list);
-//        list.forEach(System.out::println);
-
         return JSONUtil.parse(msg).toString();
     }
 
     @RequestMapping("/queryPostDetailListByPostIdList")
     public String getDetailByPostIdList(@RequestBody() Map param){
-
-
 
         List<String> postid= (List<String>) param.get("postIdList");
 
